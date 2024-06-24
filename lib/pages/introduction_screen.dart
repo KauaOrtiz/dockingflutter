@@ -14,8 +14,7 @@ class IntroScreen extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(16.0),
               child: Text(
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
-                    'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                'Application to assist ship docking\nProceed to fill in the information',
                 textAlign: TextAlign.center,
               ),
             ),

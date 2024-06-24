@@ -2,10 +2,9 @@ import 'package:dockingflutter/pages/introduction_screen.dart';
 import 'package:flutter/material.dart';
 
 class ResultScreen extends StatelessWidget {
-  final String field1;
-  final String field2;
+  final Map<String, dynamic> result;
 
-  const ResultScreen({super.key, required this.field1, required this.field2});
+  const ResultScreen({super.key, required this.result});
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +16,21 @@ class ResultScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'Field 1: $field1',
+                'Best Individual: ${result['best_individual']}',
               ),
+              const SizedBox(height: 10),
               Text(
-                'Field 2: $field2',
+                'Time taken by GA: ${result['time_ga']} seconds',
               ),
-              const Spacer(),
+              const SizedBox(height: 10),
+              Text(
+                'Navios: ${result['navios']}',
+              ),
+              const SizedBox(height: 10),
+              // Text(
+              //   'Fitness History: ${result['fitness_history']}',
+              // ),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushAndRemoveUntil(
